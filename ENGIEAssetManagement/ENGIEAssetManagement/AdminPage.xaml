@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ENGIEAssetManagement.AdminPage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="MediumPurple">
+            
+            <Label Text="Admin Page"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" 
+                FontFamily="Lato-Regular"/>
+
+            <Button 
+                HorizontalOptions="Fill" 
+                VerticalOptions="CenterAndExpand"
+                Margin="20, 0, 20, 0"
+                BackgroundColor="YellowGreen"
+                Text="List All Users"
+                Clicked="listUsers_Clicked"
+                FontFamily="Lato-Regular"
+                />
+
+            <!-- for displaying error -->
+            <Label x:Name="errorLabel" Text="" TextColor="#CC0033" Margin="0, 0, 0, 20" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontFamily="Lato-Regular"></Label>
+
+            <ListView x:Name="listUsers">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Username}" TextColor="White"></TextCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Button 
+                HorizontalOptions="Fill" 
+                VerticalOptions="CenterAndExpand"
+                Margin="20, 20, 20, 20"
+                BackgroundColor="Red"
+                Text="Log Out"
+                Clicked="Logout_Clicked"
+                FontFamily="Lato-Regular"
+                />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

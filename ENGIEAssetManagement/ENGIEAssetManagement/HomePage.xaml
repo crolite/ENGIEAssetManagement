@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ENGIEAssetManagement.HomePage"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Image Source="engie_logo.png"/>
+
+            <Button 
+                HorizontalOptions="Fill"
+                VerticalOptions="CenterAndExpand"
+                Margin="20, 0, 20, 0"
+                BackgroundColor="#009DE9"
+                Text="Scan QR Code"
+                Clicked="QRScan_Clicked"
+                FontFamily="Lato-Regular"
+                />
+
+
+            <Button 
+                HorizontalOptions="Fill" 
+                VerticalOptions="CenterAndExpand"
+                Margin="20, 0, 20, 0"
+                BackgroundColor="#CC0033"
+                Text="Log Out"
+                Clicked="Logout_Clicked"
+                FontFamily="Lato-Regular"
+                />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

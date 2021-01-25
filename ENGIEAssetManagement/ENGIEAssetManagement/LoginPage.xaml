@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ENGIEAssetManagement.LoginPage"
+             BackgroundColor="White">
+
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
+            <!-- add engie logo etc here -->
+            <Image Source="engie_logo.png"/>
+
+            <!-- login box -->
+            <StackLayout Orientation="Vertical" BackgroundColor="#009DE9" Margin="20, 0, 20, 0" VerticalOptions="CenterAndExpand">
+
+                <StackLayout Orientation="Horizontal" Margin="20">
+                    <Label Text="Username: " VerticalOptions="CenterAndExpand" FontFamily="Lato-Regular"/> <!-- or email? -->
+                    <Entry x:Name="entryUser" HorizontalOptions="FillAndExpand" FontFamily="Lato-Regular"></Entry>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="20">
+                    <Label Text="Password: " VerticalOptions="CenterAndExpand" FontFamily="Lato-Regular"/>
+                    <Entry x:Name="entryPass" IsPassword="true" HorizontalOptions="FillAndExpand" FontFamily="Lato-Regular"></Entry>
+                </StackLayout>
+
+                <Button x:Name="loginButton" BackgroundColor="#005288" Text="Login" Margin="20" Clicked="HandleLogin" IsEnabled="True" FontFamily="Lato-Regular"/> 
+
+                <!-- for displaying login errors -->
+                <Label x:Name="loginResult" Text="" TextColor="#CC0033" Margin="0, 0, 0, 20" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontFamily="Lato-Regular"></Label>
+
+            </StackLayout>
+
+            <Button Text="New user? Create Account" BackgroundColor ="White" TextColor="#009DE9" Margin="20" Clicked="GoToCreateAccount"/> 
+
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>
